@@ -1,0 +1,11 @@
+{
+  "generator-mendix": {
+    "promptValues": {
+      "copyright": "Objectivity Ltd 2019",
+      "license": "Apache 2",
+      "author": "Sergiusz Woznicki",
+      "boilerplate": "empty",
+      "widgetoptions": []
+    }
+  }
+}

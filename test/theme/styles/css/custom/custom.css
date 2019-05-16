@@ -1,0 +1,23 @@
+.brand1 .brand-image {
+  content:url("/img/Test$Images$brand1.png");
+}
+
+.brand2 .brand-image {
+  content:url("/img/Test$Images$brand2.png");
+}
+
+.brand-default .brand-image {
+  display: none;
+}
+
+.brand1 .region-sidebar {
+  background-color: #a51925;
+}
+
+.brand2 .region-sidebar {
+  background-color: #bcacd5;
+}
+
+.brand-default .region-sidebar {
+  background-color: #81a9d1;
+}
