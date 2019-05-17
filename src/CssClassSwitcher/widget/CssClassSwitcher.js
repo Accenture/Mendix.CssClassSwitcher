@@ -36,22 +36,32 @@ define([
                 this._replaceClasses(returnedString);
               }),
               error: lang.hitch(this, function(error) {
-                console.log("Error in microflow " + this.classGetterMicroflow);
-                console.log(error);
+                logger.error("Error in microflow " + this.classGetterMicroflow);
+                logger.error(error);
               })
             });
           };
         },
 
-        _replaceClasses: function (_classes) {
-          var _classesToRemove = this.classesToRemove.split(" ");
-          var _classesToAdd = _classes.split(" ");
+        _replaceClasses: function (classesToAdd) {
+          var _this = this;
+          // split by space
+          var _toRemove = this.classesToRemove.split(" ");
+          var _toAdd = classesToAdd.split(" ").filter(function(n) { return n; });;
+          // don't remove what should be added
+          _toRemove = _toRemove.filter(function(n) { return _toAdd.indexOf(n) === -1; });
           this._elementsToApplyTo.forEach(function (_element) {
-            _classesToRemove.forEach(function (_class) {
-              _element.classList.remove(_class);
+            _toRemove.forEach(function (_class) {
+              if (_element.classList.contains(_class)) {
+                //logger.debug(_this.friendlyId + ": removing class '" + _class + "' from element '", _element);
+                _element.classList.remove(_class);
+              }
             });
-            _classesToAdd.forEach(function (_class) {
-              _element.classList.add(_class);
+            _toAdd.forEach(function (_class) {
+              if (!_element.classList.contains(_class)) {
+                //logger.debug(_this.friendlyId + ": adding class '" + _class + "' to element: '", _element);
+                _element.classList.add(_class);
+              }
             });
           });
         }
