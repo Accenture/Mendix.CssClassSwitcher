@@ -1,6 +1,6 @@
 # Css Class Switcher
 
-This widget adds CSS classes determined by a microflow to elements determined by CSS selector.
+A Mendix widget adds CSS classes determined by a microflow to elements determined by CSS selector.
 
 ## Typical usage scenario
 
