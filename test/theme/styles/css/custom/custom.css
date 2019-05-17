@@ -6,8 +6,8 @@
   content:url("/img/Test$Images$brand2.png");
 }
 
-.brand-default .brand-image {
-  display: none;
+.layout-atlas .region-sidebar {
+  background-color: #f5f8fd;
 }
 
 .brand1 .region-sidebar {
@@ -18,6 +18,47 @@
   background-color: #bcacd5;
 }
 
-.brand-default .region-sidebar {
-  background-color: #81a9d1;
+.layout-atlas .region-sidebar span.glyphicon {
+  color: #ccc;
+}
+
+.brand1 .region-sidebar span.glyphicon {
+  color: #fff;
+}
+
+.brand2 .region-sidebar span.glyphicon {
+  color: #fff;
+}
+
+.layout-atlas .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a.active .glyphicon {
+  background: #fff;
+}
+
+.brand1 .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a.active .glyphicon {
+  background: #ccc;
+}
+
+.brand2 .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a.active .glyphicon {
+  background: #ccc;
+}
+
+.layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+  background-color: #f5f8fd;
+  border-color: #f5f8fd;
+  position: relative;
+  transition: none;
+}
+
+.brand1 .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+  background-color: #a51925;
+  border-color: #a51925;
+  position: relative;
+  transition: none;
+}
+
+.brand2 .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+  background-color: #bcacd5;
+  border-color: #bcacd5;
+  position: relative;
+  transition: none;
 }
