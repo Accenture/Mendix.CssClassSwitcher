@@ -30,8 +30,8 @@ define([
 
         _updateRendering: function () {
           if (this.classGetterMicroflow) {
-            mx.ui.action(this.classGetterMicroflow, {
-              params: {applyto: "none"},
+            mx.data.action({
+              params: {actionname: this.classGetterMicroflow, applyto: "none"},
               callback: lang.hitch(this, function (returnedString) {
                 this._replaceClasses(returnedString);
               }),
