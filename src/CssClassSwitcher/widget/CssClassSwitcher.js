@@ -10,6 +10,7 @@ define([
 
         // modeler params
         classGetterMicroflow: "",
+        classGetterNanoflow: "",
         elementSelector: "",
         classesToRemove: "",
 
@@ -37,6 +38,17 @@ define([
               }),
               error: lang.hitch(this, function(error) {
                 logger.error("Error in microflow " + this.classGetterMicroflow);
+                logger.error(error);
+              })
+            });
+          } else if (this.classGetterNanoflow && this.classGetterNanoflow.nanoflow) {
+            mx.data.callNanoflow({
+              nanoflow: this.classGetterNanoflow,
+              callback: lang.hitch(this, function (returnedString) {
+                this._replaceClasses(returnedString);
+              }),
+              error: lang.hitch(this, function(error) {
+                logger.error("Error in nanoflow " + this.classGetterNanoflow);
                 logger.error(error);
               })
             });
