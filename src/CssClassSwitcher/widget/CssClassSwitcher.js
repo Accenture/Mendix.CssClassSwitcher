@@ -20,7 +20,7 @@ define([
         postCreate: function () {
           this.domNode.style.display = "none";
           this._elementsToApplyTo = this.elementSelector
-            ? document.querySelectorAll(this.elementSelector)
+            ? Array.prototype.slice.call(document.querySelectorAll(this.elementSelector)) // NodeList to Array, cross-browser safe
             : [this.domNode.parentNode];
         },
 
