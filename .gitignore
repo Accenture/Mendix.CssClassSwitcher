@@ -3,8 +3,6 @@ test/deployment/
 test/.classpath
 test/.project
 test/userlib/
-test/.classpath
-test/.project
 *.launch
 *.tmp
 *.lock

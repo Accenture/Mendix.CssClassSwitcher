@@ -4,8 +4,15 @@ A Mendix widget that adds CSS classes determined by a microflow (or nanoflow) to
 
 ## Typical usage scenario
 
-It's useful in applications that need to determine styling based on arbitrary logic and change it dynamically in runtime.
-An example may be a multi-tenant app with different styling for different brands, depending on settings of the current user.
+It's useful in applications that need to **determine styling** based on **arbitrary logic** and change it **dynamically in runtime**:
+
+- An example may be a **multi-tenant app** with different styling for **different brands**, depending on settings of the current user.
+- Another use case would be to allow your users to choose between **multiple theme or skins** for your application, depending on their preferences.
+- You can also **improve accessibility** by switching to styling with e.g. bigger fonts and cleaner layout with less distractions for users with visual or cognitive impairments.
+
+## Example application
+
+[Here](https://github.com/ObjectivityLtd/Mendix.CssClassSwitcher/tree/master/test) you can find a simple yet beautiful sample app that switches its styling between light and dark depending on current user theme stored in ``Account`` entity.
 
 ## Usage
 
