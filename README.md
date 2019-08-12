@@ -14,6 +14,8 @@ It's useful in applications that need to **determine styling** based on **arbitr
 
 [Here](https://github.com/ObjectivityLtd/Mendix.CssClassSwitcher/tree/master/test) you can find a simple yet beautiful sample app that switches its styling between light and dark depending on current user theme stored in ``Account`` entity.
 
+(And [here](https://github.com/ObjectivityLtd/Mendix.CssClassSwitcher/tree/master/test-mx8) is the same app for Mendix 8.)
+
 ## Usage
 
 Place the widget inside your app and provide the following settings:

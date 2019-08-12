@@ -3,6 +3,13 @@ test/deployment/
 test/.classpath
 test/.project
 test/userlib/
+
+test-mx8/javasource/
+test-mx8/deployment/
+test-mx8/.classpath
+test-mx8/.project
+test-mx8/userlib/
+
 *.launch
 *.tmp
 *.lock
