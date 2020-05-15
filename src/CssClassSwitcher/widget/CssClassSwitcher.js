@@ -13,15 +13,23 @@ define([
         classGetterNanoflow: "",
         elementSelector: "",
         classesToRemove: "",
+        lookupMethod: "all",
 
         // internals
         _elementsToApplyTo: null,
 
         postCreate: function () {
           this.domNode.style.display = "none";
-          this._elementsToApplyTo = this.elementSelector
-            ? Array.prototype.slice.call(document.querySelectorAll(this.elementSelector)) // NodeList to Array, cross-browser safe
-            : [this.domNode.parentNode];
+          
+          if(this.lookupMethod === "all") {
+            this._elementsToApplyTo = this.elementSelector
+              ? Array.prototype.slice.call(document.querySelectorAll(this.elementSelector)) // NodeList to Array, cross-browser safe
+              : [this.domNode.parentNode];
+          }
+          else {
+            this._elementsToApplyTo = this.elementSelector
+              ? [this.domNode.closest(this.elementSelector)]: [this.domNode.parentNode];
+          }
         },
 
         update: function (obj, callback) {

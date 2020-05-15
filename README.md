@@ -22,7 +22,11 @@ Place the widget inside your app and provide the following settings:
 - `Microflow`: A microflow that has no parameters and returns a string with CSS classes that should be added to target elements. Multiple classes can be seperated with a space.
 - `Nanoflow`: Alternatively, you can use a nanoflow instead of microflow - as above.
 - `Target element selector`: Optional CSS selector of target elements to add the classes to. If empty, the parent element of the widget will be used.
+- `Target element selector lookup method`: Determines whether the DOM will be searched for _all_ elements matching the target element selector or the ancestor element closest to the widget.
 - `CSS classes to remove`: Optional CSS classes to be removed from the target elements. Multiple classes can be seperated with a space.
+
+## Limitations
+- Internet Explorer is not compatible with the lookup method `Closest ancestor`.
 
 ## Inspired by / thanks to
 - [Dynamic Classes widget](https://appstore.home.mendix.com/link/app/108838/)
