@@ -20,10 +20,19 @@
             <description>Alternatively, you can use a nanoflow instead of microflow - as above.</description>
             <returnType type="String" />
         </property>
-        <property key="elementSelector" type="string" required="false" defaultValue="">
+        <property key="elementSelector" type="string" required="false">
             <caption>Target element selector</caption>
             <category>Behavior</category>
             <description>Optional CSS selector of target elements to add the classes to. If empty, the parent element of the widget will be used.</description>
+        </property>
+        <property key="lookupMethod" type="enumeration" defaultValue="all">
+            <caption>Target element selector lookup method</caption>
+            <category>Behavior</category>
+            <description>Determines in what way the target element should be selected. 'Closest ancestor' is not supported in IE.</description>
+            <enumerationValues>
+                <enumerationValue key="all">All matching elements</enumerationValue>
+                <enumerationValue key="closest">Closest ancestor</enumerationValue>
+            </enumerationValues>
         </property>
         <property key="classesToRemove" type="string" required="false" defaultValue="">
             <caption>CSS classes to remove</caption>
