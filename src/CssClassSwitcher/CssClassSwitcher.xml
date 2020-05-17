@@ -20,7 +20,7 @@
             <description>Alternatively, you can use a nanoflow instead of microflow - as above.</description>
             <returnType type="String" />
         </property>
-        <property key="elementSelector" type="string" required="false" defaultValue="True">
+        <property key="elementSelector" type="string" required="false">
             <caption>Target element selector</caption>
             <category>Behavior</category>
             <description>Optional CSS selector of target elements to add the classes to. If empty, the parent element of the widget will be used.</description>
